@@ -1,611 +1,100 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    <meta name="description" content="Name of your web site">
-    <meta name="author" content="Marketify">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>AKILA Say</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Akila</title>
+   <!-- Linking the style sheet -->
+   <link rel="stylesheet" href="./css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css" />
-    <link rel="stylesheet" type="text/css" href="css/colors.css" />
-    <link rel="stylesheet" type="text/css" href="css/darkMode.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
-
+   <script>
+  function changeBackgroundColor() {
+      var body = document.body;
+      console.log(body);
+      body.classList.add('changed');
+    }
+  </script>
+  
 </head>
-
 <body>
+        <header>
+                <!-- <img src="images/logo.jpg" alt="logo" class="logo"> -->
+                <div class="logo"> 
+                    <img src="./img/logo.png" alt="profile pic" style="height: 30px;width: 30px;border-radius: 50%;">
+                </div>
+                <nav>
+                    <ul> <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="myButton" class="clickable-icon" onclick="toggleBackgroundColor()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5 h-5 text-secondary hover:text-primary cursor-pointer transition-colors text-secondary"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path></svg>
+                </div>
+            </header>
 
-    <div id="preloader">
-        <div class="loader_line"></div>
+        <div class="content">
+            <div>
+                <div class="main-area">
+                </div>
+                <h1 style="font-size:25px;font-weight: 900;">Akila Say</h1>
+                <h5 style="color: darkgray;">I write code and make videos.</h5>
+                <div class="main">
+                    <img src="./img/dp - Copy.jpg" alt="profile pic" class="profile-pic">
+                    <ul class="social-media-link">
+                        <li>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                            </svg>
+                            <a href="#youtube">Youtube</a></li>
+                        <li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                        </svg><a href="#GitHub">GitHub</a></li>
+                        <li><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                        </svg><a href="#LinkedIn">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <p>Hi, I'm Akila Say, a software engineer who loves building cool things
+                     with code. In addition to coding, I also make YouTube videos, 
+                     where I focus on tech, creative vlogs, and personal development ...</p>
+            </div>
+            
+
+            <div class="project-section">
+                <h3 style="color:  rgba(125, 121, 130, 0.85);;">P R O J E C T S </h1>
+                <div class="project-card">
+                    <img src="./img/project 1.jpg" alt="profile pic" class="project-pic">
+                    <p>Hi, I'm Akila Say, a software engineer who loves building cool things
+                        with code. In addition to coding, I also make YouTube videos, 
+                        where I focus on tech, creative vlogs, and personal development.</p>
+                </div>
+                <div class="project-card">
+                    <img src="./img/p2.jpeg" alt="profile pic" class="project-pic">
+                    <p>Hi, I'm Akila Say, a software engineer who loves building cool things
+                        with code. In addition to coding, I also make YouTube videos, 
+                        where I focus on tech, creative vlogs, and personal development.</p>
+                </div>
+                <div class="project-card">
+                    <img src="./img/p3.jpeg" alt="profile pic" class="project-pic">
+                    <p>Hi, I'm Akila Say, a software engineer who loves building cool things
+                        with code. In addition to coding, I also make YouTube videos, 
+                        where I focus on tech, creative vlogs, and personal development.</p>
+                </div>
+
+            </div>
+
+            <h4><a style="color: darkolivegreen;margin-top: 50px" href="#">See All</a</h6>
+
+        </div>
+
+
+
+
+  
+        <!-- main -->
+        <!-- footer -->
     </div>
 
-
-    <div class="grax_tm_all_wrap" data-magic-cursor="" data-color="crimson">
-
-
-<!-- 
-        <div class="grax_tm_settings">
-            <div class="icon">
-                <img class="svg" src="img/svg/setting.svg" alt="" />
-                <a class="link" href="#"></a>
-            </div>
-            <div class="wrapper">
-                <ul class="direction">
-                    <li><a class="active light" href="#"><img class="svg" src="img/svg/weather.svg" alt=" /"></a></li>
-                    <li><a class="dark" href="#"><img class="svg" src="img/svg/islam.svg" alt=" /"></a></li>
-                </ul>
-                <span class="title">Unlimited Colors</span>
-                <ul class="colors">
-                    <li><a class="blue" href="#"></a></li>
-                    <li><a class="green" href="#"></a></li>
-                    <li><a class="brown" href="#"></a></li>
-                    <li><a class="pink" href="#"></a></li>
-                    <li><a class="orange" href="#"></a></li>
-                    <li class="bl"><a class="black" href="#"></a></li>
-                    <li class="wh"><a class="white" href="#"></a></li>
-                    <li><a class="purple" href="#"></a></li>
-                    <li><a class="sky" href="#"></a></li>
-                    <li><a class="cadetBlue" href="#"></a></li>
-                    <li><a class="crimson" href="#"></a></li>
-                    <li><a class="olive" href="#"></a></li>
-                    <li><a class="red" href="#"></a></li>
-                </ul>
-                <span class="title">Magic Cursor</span>
-                <ul class="cursor">
-                    <li><a class="showme show" href="#"></a></li>
-                    <li><a class="hide" href="#"><img class="svg" src="img/svg/arrow.svg" alt="" /></a></li>
-                </ul>
-            </div>
-        </div> -->
-
-
-        <div class="grax_tm_modalbox_news">
-            <div class="box_inner">
-                <div class="close">
-                    <a href="#"><img class="svg" src="img/svg/cancel.svg" alt="" /></a>
-                </div>
-                <div class="description_wrap scrollable">
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_topbar">
-            <div class="container">
-                <div class="topbar_inner">
-                    <div class="logo">
-                        <a class="dark" href="#"><img src="img/logo/dark.png" alt="" /></a>
-                        <a class="light" href="#"><img src="img/logo/logo.png" alt="" /></a>
-                    </div>
-                    <div class="menu">
-                        <ul class="anchor_nav">
-                            <li class="current"><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_mobile_menu">
-            <div class="topbar_inner">
-                <div class="container bigger">
-                    <div class="topbar_in">
-                        <div class="logo">
-                            <a href="#"><img src="img/logo/dark.png" alt="" /></a>
-                        </div>
-                        <div class="my_trigger">
-                            <div class="hamburger hamburger--collapse-r">
-                                <div class="hamburger-box">
-                                    <div class="hamburger-inner"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="dropdown">
-                <div class="container">
-                    <div class="dropdown_inner">
-                        <ul class="anchor_nav">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#news">News</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_hero" id="home">
-            <div class="ripple" id="ripple"></div>
-            <div class="container water">
-                <div class="details" data-animation="toRight">
-                    <h3 class="fn_animation name">Akila</h3>
-                    <span class="fn_animation job">Software Engineer</span>
-                </div>
-                <div class="grax_tm_down" data-skin="light">
-                    <div class="line_wrapper">
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_section" id="about">
-            <div class="grax_tm_about">
-                <div class="container">
-                    <div class="about_inner">
-                        <div class="left wow fadeInLeft" data-wow-duration="1.5s">
-                            <div class="image parallax" data-relative-input="true">
-                                <img src="img/placeholders/3-4.jpg" alt="" />
-                                <div class="main layer" data-img-url="img/about/1.jpg" data-depth="0.04"></div>
-                            </div>
-                        </div>
-                        <div class="right wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-                            <div class="grax_tm_title_holder">
-                                <h3>About <span>Me</span></h3>
-                            </div>
-                            <div class="text">
-                                <p>Hello! I'm Akila. I'm a Software engineer, and I'm very passionate and dedicated to my work. With 3+ years experience as a professional engineer,
-                                     I have acquired the skills and knowledge necessary to make your project
-                                    a success. I enjoy every step of the software development process, from discussion and collaboration.</p>
-                            </div>
-                            <div class="list">
-                                <ul>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img class="svg" src="img/svg/checked.svg" alt="" />
-                                            <span>Web Development</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img class="svg" src="img/svg/checked.svg" alt="" />
-                                            <span>AI application development</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img class="svg" src="img/svg/checked.svg" alt="" />
-                                            <span>Mobile Application</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="list_inner">
-                                            <img class="svg" src="img/svg/checked.svg" alt="" />
-                                            <span>Search Engine Optimization</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="grax_tm_button">
-                                <a href="img/resume/resume.jpg" download>Download CV</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_section" id="portfolio">
-            <div class="grax_tm_portfolio">
-                <div class="container">
-                    <div class="grax_tm_title_holder">
-                        <h3>Selected <span>Works</span></h3>
-                    </div>
-                    <div class="portfolio_list">
-                        <ul class="gallery_zoom my_waypoint">
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="img/portfolio/1.jpg"></div>
-                                    </div>
-                                    <div class="overlay"></div>
-                                    <div class="details">
-                                        <span>Video</span>
-                                        <h3>Sweet Fruit</h3>
-                                    </div>
-                                    <a class="grax_tm_full_link popup-youtube" href="https://www.youtube.com/watch?v=ICr_bOuM9Zo"></a>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="img/portfolio/2.jpg"></div>
-                                    </div>
-                                    <div class="overlay"></div>
-                                    <div class="details">
-                                        <span>Branding</span>
-                                        <h3>Good Present</h3>
-                                    </div>
-                                    <a class="grax_tm_full_link zoom" href="img/portfolio/2.jpg"></a>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="img/portfolio/3.jpg"></div>
-                                    </div>
-                                    <div class="overlay"></div>
-                                    <div class="details">
-                                        <span>Design</span>
-                                        <h3>Ice Cream</h3>
-                                    </div>
-                                    <a class="grax_tm_full_link zoom" href="img/portfolio/3.jpg"></a>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="img/portfolio/4.jpg"></div>
-                                    </div>
-                                    <div class="overlay"></div>
-                                    <div class="details">
-                                        <span>Video</span>
-                                        <h3>Black Coffee</h3>
-                                    </div>
-                                    <a class="grax_tm_full_link popup-youtube" href="https://www.youtube.com/watch?v=ICr_bOuM9Zo"></a>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="img/portfolio/5.jpg"></div>
-                                    </div>
-                                    <div class="overlay"></div>
-                                    <div class="details">
-                                        <span>Branding</span>
-                                        <h3>Blue Lemon</h3>
-                                    </div>
-                                    <a class="grax_tm_full_link zoom" href="img/portfolio/5.jpg"></a>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/1-1.jpg" alt="" />
-                                        <div class="main" data-img-url="img/portfolio/7.jpg"></div>
-                                    </div>
-                                    <div class="overlay"></div>
-                                    <div class="details">
-                                        <span>Design</span>
-                                        <h3>Delicious Cherry</h3>
-                                    </div>
-                                    <a class="grax_tm_full_link zoom" href="img/portfolio/7.jpg"></a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_progress_part">
-            <div class="container">
-                <div class="part_inner">
-                    <div class="left wow fadeInLeft" data-wow-duration="1.5s">
-                        <h3>I have high skills in developing and programming</h3>
-                        <p>I was doing everything in my power to provide me with all the experiences to provide cost-effective and high quality products to satisfy my customers all over the world</p>
-                    </div>
-                    <div class="right wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-                        <div class="kioto_progress">
-                            <div class="progress_inner" data-value="95">
-                                <span><span class="label">Web Development</span><span class="number">95%</span></span>
-                                <div class="background">
-                                    <div class="bar">
-                                        <div class="bar_in"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress_inner" data-value="80">
-                                <span><span class="label">Brand Identity</span><span class="number">80%</span></span>
-                                <div class="background">
-                                    <div class="bar">
-                                        <div class="bar_in"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress_inner" data-value="90">
-                                <span><span class="label">Logo Design</span><span class="number">90%</span></span>
-                                <div class="background">
-                                    <div class="bar">
-                                        <div class="bar_in"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_section">
-            <div class="grax_tm_talk">
-                <div class="container">
-                    <div class="talk_inner">
-                        <div class="text wow fadeInLeft" data-wow-duration="1.5s">
-                            <h3><span>I'm available for freelance work</span></h3>
-                        </div>
-                        <div class="button wow fadeInLeft anchor" data-wow-duration="1.5s" data-wow-delay=".2s">
-                            <a href="#contact">Contact Me</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_section" id="news">
-            <div class="grax_tm_news">
-                <div class="container">
-                    <div class="grax_tm_title_holder">
-                        <h3>Latest <span>News</span></h3>
-                    </div>
-                    <div class="news_list">
-                        <ul>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="img/news/1.jpg"></div>
-                                        <a class="grax_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <h3 class="title"><a href="#">Developers watch out for these burnout symptoms</a></h3>
-                                        <p class="date">By <a href="#">Alex Watson</a> <span>01 January 2022</span></p>
-                                    </div>
-                                    <div class="description">
-                                        <p>As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer
-                                            look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer look into fast-paced New York web
-                                            design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.</p>
-                                        <blockquote>As Vintage decided to have a closer look into fast-paced New York web design realm in person. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with
-                                            most diverse and exceptionally captivating personalities. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally
-                                            captivating personalities.</blockquote>
-                                        <p>As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. We encounter professionals with careers
-                                            to covet and lives to write books about. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.
-                                            As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer
-                                            look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.</p>
-                                        <div class="share">
-                                            <span>Share:</span>
-                                            <ul class="social">
-                                                <li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/behance.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/dribbble.svg" alt=""></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="img/news/2.jpg"></div>
-                                        <a class="grax_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <h3 class="title"><a href="#">How to be appreciated for your hard work as a developer</a></h3>
-                                        <p class="date">By <a href="#">Brook Kennedy</a> <span>22 December 2021</span></p>
-                                    </div>
-                                    <div class="description">
-                                        <p>As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer
-                                            look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer look into fast-paced New York web
-                                            design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.</p>
-                                        <blockquote>As Vintage decided to have a closer look into fast-paced New York web design realm in person. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with
-                                            most diverse and exceptionally captivating personalities. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally
-                                            captivating personalities.</blockquote>
-                                        <p>As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. We encounter professionals with careers
-                                            to covet and lives to write books about. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.
-                                            As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer
-                                            look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.</p>
-                                        <div class="share">
-                                            <span>Share:</span>
-                                            <ul class="social">
-                                                <li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/behance.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/dribbble.svg" alt=""></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-                                <div class="list_inner">
-                                    <div class="image">
-                                        <img src="img/placeholders/4-3.jpg" alt="" />
-                                        <div class="main" data-img-url="img/news/3.jpg"></div>
-                                        <a class="grax_tm_full_link" href="#"></a>
-                                    </div>
-                                    <div class="details">
-                                        <h3 class="title"><a href="#">How designers and developers can collaborate better</a></h3>
-                                        <p class="date">By <a href="#">Paola Atkins</a> <span>05 December 2021</span></p>
-                                    </div>
-                                    <div class="description">
-                                        <p>As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer
-                                            look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer look into fast-paced New York web
-                                            design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.</p>
-                                        <blockquote>As Vintage decided to have a closer look into fast-paced New York web design realm in person. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with
-                                            most diverse and exceptionally captivating personalities. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally
-                                            captivating personalities.</blockquote>
-                                        <p>As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. We encounter professionals with careers
-                                            to covet and lives to write books about. As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.
-                                            As Vintage decided to have a closer look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities. As Vintage decided to have a closer
-                                            look into fast-paced New York web design realm in person, we get to acquaint with most diverse and exceptionally captivating personalities.</p>
-                                        <div class="share">
-                                            <span>Share:</span>
-                                            <ul class="social">
-                                                <li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/behance.svg" alt=""></a></li>
-                                                <li><a href="#"><img class="svg" src="img/svg/social/dribbble.svg" alt=""></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_contact" id="contact">
-            <div class="container">
-                <div class="grax_tm_title_holder">
-                    <h3>Get in <span>Touch</span></h3>
-                </div>
-                <div class="contact_inner">
-                    <div class="left wow fadeInLeft" data-wow-duration="1s">
-                        <div class="text">
-                            <p>Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday</p>
-                        </div>
-                        <div class="info_list">
-                            <ul>
-                                <li>
-                                    <div class="list_inner">
-                                        <img class="svg" src="img/svg/location.svg" alt="" />
-                                        <p><span class="first">Address:</span><span class="second">Brook 103, New York, USA</span></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img class="svg" src="img/svg/email.svg" alt="" />
-                                        <p><span class="first">Email:</span><span class="second"><a href="#"><span class="__cf_email__" data-cfemail="85e0fde4e8f5e9e0c5e2e8e4ece9abe6eae8">[email&#160;protected]</span></a>
-                                            </span>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img class="svg" src="img/svg/phone.svg" alt="" />
-                                        <p><span class="first">Phone:</span><span class="second"><a href="#">+77 033 442 55 57</a></span></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img class="svg" src="img/svg/social/dribbble.svg" alt="" />
-                                        <p><span class="first">Website:</span><span class="second"><a href="#">www.myaddress.com</a></span></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img class="svg" src="img/svg/social/twitter.svg" alt="" />
-                                        <p><span class="first">Twitter:</span><span class="second"><a href="#">@twitternickname</a></span></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="list_inner">
-                                        <img class="svg" src="img/svg/social/facebook.svg" alt="" />
-                                        <p><span class="first">Facebook:</span><span class="second"><a href="#">@facebooknickname</a></span></p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="right wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
-                        <div class="fields">
-                            <form action="/" method="post" class="contact_form" id="contact_form">
-                                <div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-                                <div class="empty_notice"><span>Please Fill Required Fields</span></div>
-                                <div class="first">
-                                    <ul>
-                                        <li>
-                                            <input id="name" type="text" placeholder="Name">
-                                        </li>
-                                        <li>
-                                            <input id="email" type="text" placeholder="Email">
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="last">
-                                    <textarea id="message" placeholder="Message"></textarea>
-                                </div>
-                                <div class="grax_tm_button">
-                                    <a id="send_message" href="#">Send Message</a>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="grax_tm_section">
-            <div class="grax_tm_copyright">
-                <div class="my_wave">
-                    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-<defs></defs>
-<path id="wave_img" data-color="#fff" d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z" fill="#fff"></path>
-</svg>
-                </div>
-                <div class="container">
-                    <div class="copyright_inner">
-                        <div class="logo wow fadeInLeft" data-wow-duration="1s">
-                            <img src="img/logo/logo.png" alt="" />
-                        </div>
-                        <div class="social wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
-                            <ul>
-                                <li><a href="#"><img class="svg" src="img/svg/social/facebook.svg" alt="" /></a></li>
-                                <li><a href="#"><img class="svg" src="img/svg/social/twitter.svg" alt="" /></a></li>
-                                <li><a href="#"><img class="svg" src="img/svg/social/dribbble.svg" alt="" /></a></li>
-                                <li><a href="#"><img class="svg" src="img/svg/social/tik-tok.svg" alt="" /></a></li>
-
-                            </ul>
-                        </div>
-                        <div class="copy wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                            <p>&copy; Copyright 2023 by Ak</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="mouse-cursor cursor-outer"></div>
-        <div class="mouse-cursor cursor-inner"></div>
-
-
-        <div class="progressbar">
-            <a href="#"><span class="text">To Top</span></a>
-            <span class="line"></span>
-        </div>
-
-    </div>
-
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
-    <script src="js/plugins.js"></script>
-    <script src="js/init.js"></script>
-
+    <!-- <script src="script.js"></script> -->
 </body>
-
 </html>
